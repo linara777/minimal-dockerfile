@@ -3,6 +3,10 @@ FROM python:3.9-slim
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook jupyterlab
     
+RUN pip install numpy 
+RUN pip install matplotlib
+RUN pip install scipy 
+  
 
 # create user with a home directory
 ARG NB_USER
@@ -24,6 +28,3 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-RUN pip install numpy 
-RUN pip install matplotlib
-RUN pip install scipy 
