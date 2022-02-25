@@ -2,7 +2,7 @@ FROM python:3.9-slim
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook jupyterlab
-    pip install --no-cache-dir numpy scipy matplotlib
+    pip install --no-cache numpy scipy matplotlib
 
 # create user with a home directory
 ARG NB_USER
