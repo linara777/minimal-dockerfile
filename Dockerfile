@@ -24,6 +24,6 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-pip install numpy 
-pip install matplotlib
-pip install scipy 
+RUN pip install numpy 
+RUN pip install matplotlib
+RUN pip install scipy 
